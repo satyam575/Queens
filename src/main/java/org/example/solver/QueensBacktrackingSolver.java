@@ -27,18 +27,20 @@ public class QueensBacktrackingSolver implements BoardSolver {
     int[][] board;
     boolean[][] crowns;
     boolean[] colorUsed;
-    int n = 9;
+    int n ;
 
     @Override
     public boolean[][] solve(Board board) {
+        System.out.println(board.getSize());
         this.board = board.getMatrix();
-        this.crowns = new boolean[9][9];
-        this.colorUsed = new boolean[10]; // Colors from 1 to 9
+        this.n = board.getSize();
+        this.crowns = new boolean[n][n];
+        this.colorUsed = new boolean[n*n];
         helper(0);
         return crowns;
     }
     boolean helper(int row){
-        if(row == 9) return true;
+        if(row == n) return true;
         for(int col = 0; col < n ;col++){
             if(isValid(row,col)){
                 crowns[row][col] = true;

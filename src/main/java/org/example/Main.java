@@ -23,6 +23,16 @@ public class Main {
             System.out.println("Selected file: " + imagePath);
 
             try {
+                String gridSizeInput = JOptionPane.showInputDialog(null,
+                        "Enter grid size (example: 9 for 9x9 board):",
+                        "Grid Size Input",
+                        JOptionPane.QUESTION_MESSAGE);
+
+                if (gridSizeInput == null || gridSizeInput.trim().isEmpty()) {
+                    throw new RuntimeException("Grid size input was cancelled or empty.");
+                }
+
+                int gridSize = Integer.parseInt(gridSizeInput.trim());
                 // Solve the board
                 BoardGameService gameService = new BoardGameService(
                         new ImageBoardExtractor(),
@@ -30,7 +40,7 @@ public class Main {
                         new WindowPaneDisplayer()
                 );
 
-                gameService.solveGame(imagePath);
+                gameService.solveGame(imagePath,gridSize);
 
             } catch (Exception e) {
                 e.printStackTrace();

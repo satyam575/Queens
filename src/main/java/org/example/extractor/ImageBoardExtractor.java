@@ -13,12 +13,10 @@ import org.opencv.imgproc.Imgproc;
 
 import java.util.List;
 
-public class ImageBoardExtractor implements BoardExtractor {
-
-    private final int gridSize = 9; // 9x9 grid assumed
+public class ImageBoardExtractor implements BoardExtractor {// 9x9 grid assumed
 
     @Override
-    public Board extractBoard(String imagePath) {
+    public Board extractBoard(String imagePath,int gridSize) {
         OpenCV.loadLocally(); // Load native libs
 
         Mat original = Imgcodecs.imread(imagePath);
@@ -65,6 +63,6 @@ public class ImageBoardExtractor implements BoardExtractor {
             }
         }
 
-        return new Board(matrix);
+        return new Board(gridSize,matrix);
     }
 }

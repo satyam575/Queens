@@ -18,8 +18,8 @@ public class BoardGameService {
         this.resultDisplayer = resultDisplayer;
     }
 
-    public void solveGame(String inputSource) {
-        Board board = extractor.extractBoard(inputSource);
+    public void solveGame(String inputSource, int gridSize) {
+        Board board = extractor.extractBoard(inputSource,gridSize);
         boolean[][] solution = solver.solve(board);
         resultDisplayer.display(board, solution);
     }
