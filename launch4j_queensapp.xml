@@ -1,0 +1,23 @@
+<launch4jConfig>
+    <dontWrapJar>false</dontWrapJar>
+    <headerType>gui</headerType> <!-- Important: No console window -->
+    <jar>target/QueensApp-1.0-SNAPSHOT-shaded.jar</jar> <!-- path to your fat JAR -->
+    <outfile>QueensApp.exe</outfile> <!-- name of your exe -->
+    <errTitle>Queens App Error</errTitle>
+    <cmdLine />
+    <chdir>.</chdir>
+    <priority>normal</priority>
+    <downloadUrl>https://adoptium.net/</downloadUrl> <!-- in case Java not found -->
+    <supportUrl>https://github.com/satyam575/Queens</supportUrl>
+    <customProcName>false</customProcName>
+    <stayAlive>false</stayAlive>
+    <restartOnCrash>false</restartOnCrash>
+
+    <jre>
+        <path></path>
+        <minVersion>8</minVersion>
+        <maxVersion></maxVersion>
+        <jdkPreference>preferJre</jdkPreference>
+        <runtimeBits>64</runtimeBits>
+    </jre>
+</launch4jConfig>
