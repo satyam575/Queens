@@ -21,6 +21,14 @@ Solve custom **Queens placement puzzles** directly from screenshots using **Java
 
 ---
 
+## 📸 Example Flow
+
+| Problem | Solved Board | Terminal Output |
+|:---|:---|:---|
+| <img src="assets/queens.png" width="250"/> | <img src="assets/queens_sol.png" width="250"/> | <img src="assets/queens_solution.png" width="250"/> |
+
+---
+
 ## 📸 How It Works
 
 1. You take a screenshot of the Queens board.
@@ -49,10 +57,13 @@ Solve custom **Queens placement puzzles** directly from screenshots using **Java
 
 ---
 
-## 📦 How to Run Locally
+## 🚀 Future Scope
 
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/satyam575/Queens.git
-cd Queens
+- [ ] Handle rotated board screenshots (detect skew, correct perspective).
+- [ ] Add option to save solution image to disk.
+- [ ] Make board size configurable (e.g., 8x8, 10x10).
+- [ ] Bundle OpenCV native DLL inside the JAR for cleaner packaging.
+- [ ] Create a full Windows Installer (Setup.exe) for easy distribution.
+- [ ] Add "Save As..." option after showing solution popup.
+- [ ] Support animated solving (step-by-step queen placement visualization).
+- [ ] Build a web-based version (SpringBoot + React).
