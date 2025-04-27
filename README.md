@@ -1,32 +1,58 @@
-# Queens Game Solver
+# 👑 Queens Game Solver
 
-This project reads a screenshot of a "Queens" board, detects regions automatically using OpenCV, maps each color region, and solves the board using a backtracking algorithm.
+Solve custom **Queens placement puzzles** directly from screenshots using **Java + OpenCV**.
 
-## Components
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-17-brightgreen" />
+  <img src="https://img.shields.io/badge/OpenCV-4.x-blue" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+</p>
 
-- `extractor` : Extract the board matrix from image input
-- `mapper` : Map center pixel colors to region IDs
-- `solver` : Solve the Queens Game with constraints
-- `model` : Holds board and related data
-- `service` : Facade to tie everything together
-- `util` : Helper methods (OpenCV utils)
+---
 
-## How it works
-1. User saves a screenshot into the `input` folder
-2. Program detects outer box and divides into 9x9
-3. Samples center pixel of each cell
-4. Maps regions
-5. Solves using backtracking
-6. Prints solution
+## 🛠 Features
 
-## Technologies
-- Java 8
-- OpenCV 4.x (Java bindings)
-- Maven (for dependency management)
+- 📸 **Select a Screenshot** of a custom Queens board (different colored regions).
+- 🧠 **Detects Regions Automatically** using image processing.
+- 🎯 **Solves Queens Game** using optimized backtracking algorithm.
+- 🎨 **Generates Clean Solution Image** (grid + Queens marked).
+- ⚡ **Instant GUI Display** — no need to save or load manually.
+- 🎯 Built for **speed**, **simplicity**, and **accuracy**.
 
-## How to Run
+---
+
+## 📸 How It Works
+
+1. You take a screenshot of the Queens board.
+2. Open the app ➔ Select the image via file picker.
+3. The app:
+   - Detects the board's outer rectangle.
+   - Divides it into a 9x9 grid.
+   - Samples center colors to map regions.
+   - Solves the Queens puzzle based on constraints:
+     - One Queen per row
+     - One Queen per column
+     - No diagonal attacks
+     - One Queen per color region
+4. Solution is **instantly shown** in a neat popup window!
+
+---
+
+## 🚀 Tech Stack
+
+| Technology | Purpose |
+|:---|:---|
+| Java 8 | Core programming |
+| OpenCV 4.x (Java bindings) | Image processing |
+| Swing (JFileChooser, JFrame) | Minimal GUI |
+| Maven | Build and dependency management |
+
+---
+
+## 📦 How to Run Locally
+
+1. **Clone the repository**
+
 ```bash
 git clone https://github.com/satyam575/Queens.git
 cd Queens
-mvn clean install
-java -cp target/Queens-1.0-SNAPSHOT.jar Main
