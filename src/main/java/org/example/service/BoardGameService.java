@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.display.Displayer;
 import org.example.display.TerminalDisplayer;
 import org.example.extractor.BoardExtractor;
 import org.example.model.Board;
@@ -9,9 +10,9 @@ public class BoardGameService {
 
     private final BoardExtractor extractor;
     private final BoardSolver solver;
-    private final TerminalDisplayer resultDisplayer;
+    private final Displayer resultDisplayer;
 
-    public BoardGameService(BoardExtractor extractor, BoardSolver solver, TerminalDisplayer resultDisplayer) {
+    public BoardGameService(BoardExtractor extractor, BoardSolver solver, Displayer resultDisplayer) {
         this.extractor = extractor;
         this.solver = solver;
         this.resultDisplayer = resultDisplayer;
