@@ -21,6 +21,14 @@ Solve custom **Queens placement puzzles** directly from screenshots using **Java
 
 ---
 
+## 📸 Example Flow
+
+| Problem | Solved Board | Terminal Output |
+|:---|:---|:---|
+| <img src="assets/queens.png" width="250"/> | <img src="assets/queens_sol.png" width="250"/> | <img src="assets/queens_solution.png" width="250"/> |
+
+---
+
 ## 📸 How It Works
 
 1. You take a screenshot of the Queens board.
